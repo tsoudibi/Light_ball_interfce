@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>LightBall</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="sytle.css">
+    <script src="https://kit.fontawesome.com/da7fdceb5d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+
+        <!-- <audio src="example.mp3" id="musicPlayer"></audio> -->
+
+        <!-- <audio id="musicPlayer"> -->
+        <!-- <source src="example.mp3"> -->
+        <!-- </audio> -->
+
+        <!-- <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="my_file">
+            <input type="submit" value="Upload">
+        </form> -->
+
+        <!-- top -->
+        <div class="area a1">
+
+            <div class="block">
+                <h1 class="block-title">effect option</h1>
+                <div class="sblock">
+                    <li onclick="selectEffect(this,0)">effect1</li>
+                    <li onclick="selectEffect(this,1)">effect2</li>
+                    <li onclick="selectEffect(this,2)">effect3</li>
+                    <li onclick="selectEffect(this,3)">effect4</li>
+                </div>
+                <input type="button" value="ADD EFFECT" class="btn" onclick="addEffect()">
+            </div>
+
+            <div class="block">
+                <h1 class="block-title">effect list</h1>
+                <div class="sblock" id="effect-list">
+
+                </div>
+            </div>
+
+            <div class="block">
+                <h1 class="block-title">Effect Settings</h1>
+                <div class="sblock">
+                    <span id="effecttype"><input type="text" id="typeinput" value=""></span>
+                    <span id="effectstart"><input type="text" id="startinput" value=""></span>
+                    <span id="effectend"><input type="text" id="endinput" value=""></span>
+                    <span id="effectcolor"><input type="color" id="colorinput" value="#ffffff"></span>
+                </div>
+            </div>
+
+            <div class="block">
+                <p id="test"></p>
+            </div>
+
+        </div>
+
+
+        <!-- bottom -->
+        <div class="area a2">
+            <div class="music-player">
+                <div class="current-time">
+                    <i>select time :</i>
+                    <i id="selecttime">0</i>
+                </div>
+
+                <i class="fas fa-backward btn" onclick="playBackward()" title="倒退"></i>
+                <i class="fas fa-play btn" onclick="playMusic()" title="播放" id="playandpause"></i>
+                <i class="fas fa-stop btn" onclick="stopMusic()" title="停止"></i>
+                <i class="fas fa-forward btn" onclick="playForward()" title="快進"></i>
+                <i class="fas fa-volume-up btn" onclick="changeVolume()" title="音量"></i>
+
+                <div class="music-time">
+                    <i class="fas fa-clock"></i>
+                    <i id="time">0</i>
+                </div>
+            </div>
+
+            <div id="waveform" class="waveform"></div>
+            <!-- <div class="waver-player" id="canvas">
+                <canvas id="tCanvas" width="800" height="10"></canvas>
+                <canvas id="wCanvas" width="800" height="200"></canvas>
+            </div> -->
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+    <script src="wave.js"></script>
+    <script src="audio_.js"></script>
+</body>
+
+</html>
