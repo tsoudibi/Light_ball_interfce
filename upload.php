@@ -21,5 +21,5 @@ if ($_FILES['my_file']['error'] === UPLOAD_ERR_OK){
 } else {
   echo '錯誤代碼：' . $_FILES['my_file']['error'] . '<br/>';
 }
-header("Location: home.html");
+header("Location: index.html");
 ?>
